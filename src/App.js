@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+
 import "./App.css";
-/* import Radium, { StyleRoot } from "radium"; */
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -44,7 +44,6 @@ class App extends Component {
   };
 
   deletePersonHandler = (personIndex) => {
-    //const persons = this.state.persons.slice();
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({ persons: persons });
@@ -109,7 +108,7 @@ class App extends Component {
         <h1> Hi </h1>
         <p className={classes.join(" ")}>This is really working</p>
 
-        <button style={style} onClick={() => this.togglePersonHandler()}>
+        <button className="button" onClick={() => this.togglePersonHandler()}>
           Toggle Persons
         </button>
         {persons}
@@ -118,5 +117,4 @@ class App extends Component {
   }
 }
 
-/* export default Radium(App); */
 export default App;

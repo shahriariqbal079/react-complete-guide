@@ -1,6 +1,4 @@
 import React from "react";
-/* import "./Person.css"; */
-/* import Radium from "radium"; */
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -18,13 +16,7 @@ width: 60%;
 `;
 
 const person = (props) => {
-  const style = {
-    "@media (min-width: 500px)": {
-      width: "450px",
-    },
-  };
   return (
-    //<div className="Person" style={style}>
     <StyledDiv>
       <p onClick={props.click}>
         I'm a Person {props.name} and {props.age}
@@ -35,5 +27,4 @@ const person = (props) => {
   );
 };
 
-/* export default Radium(person); */
 export default person;
